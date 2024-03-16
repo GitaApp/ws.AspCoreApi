@@ -1,0 +1,37 @@
+﻿<Properties StartupConfiguration="{617B896D-9D12-40DB-9016-1A8B64B8FDD7}|https">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/oberhauserjanos/Projects/gitaAPI/gitaAPI/Controllers/Container.cs" relfile="gitaAPI/Controllers/Container.cs" line="106" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="gitaAPI/Controllers/Container.cs">
+    <Files>
+      <File FileName="gitaAPI/Controllers/ShipmentController.cs" />
+      <File FileName="gitaAPI/Entities/getShipmentDataWithTaskCode.cs" />
+      <File FileName="gitaAPI/Program.cs" />
+      <File FileName="gitaAPI/appsettings.json" />
+      <File FileName="gitaAPI/Controllers/Container.cs" Line="169" Column="1" />
+      <File FileName="gitaAPI/Controllers/EnsureController.cs" />
+      <File FileName="gitaAPI/WeatherForecast.cs" />
+      <File FileName="gitaAPI/Entities/ContainerElements.cs" />
+      <File FileName="gitaAPI/Entities/ErrorHandling.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="gitaAPI" expanded="True">
+            <Node name="gitaAPI" expanded="True">
+              <Node name="Controllers" expanded="True">
+                <Node name="Container.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.gitaAPI PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+</Properties>

@@ -26,9 +26,11 @@
   <ItemGroup>
     <None Remove="Entities\" />
     <None Remove="Examples\" />
+    <None Remove="Services\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Entities\" />
     <Folder Include="Examples\" />
+    <Folder Include="Services\" />
   </ItemGroup>
 </Project>

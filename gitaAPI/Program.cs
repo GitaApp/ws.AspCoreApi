@@ -1,4 +1,5 @@
 ﻿using gitaAPI.Data;
+
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Http.Features;
 using Microsoft.AspNetCore.Identity;
@@ -116,6 +117,12 @@ builder.Services.AddControllers(options =>
     options.OutputFormatters.RemoveType<HttpNoContentOutputFormatter>();
 });
 
+builder.Services.AddHttpClient();
+
+//////call services
+builder.Services.AddHostedService<RoyalCargoFileSenderBackgroundService> ();
+builder.Services.AddHostedService<RoyalCargoPointDataSyncService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -143,3 +150,4 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+

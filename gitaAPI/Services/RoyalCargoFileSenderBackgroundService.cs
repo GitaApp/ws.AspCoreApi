@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
-using System.Diagnostics;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using Newtonsoft.Json;
-using System.Net.Http.Headers;
+using System.Text.Json;
+using System.Threading;
+using System.Threading.Tasks;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 
 public class RoyalCargoFileSenderBackgroundService : BackgroundService
 {
@@ -31,9 +34,9 @@ public class RoyalCargoFileSenderBackgroundService : BackgroundService
         // Token lekérése
         _token = await GetTokenAsync(stoppingToken);
 
-        while (!stoppingToken.IsCancellationRequested)
+        try
         {
-            try
+            while (true) // Végtelen ciklus futtatása
             {
                 using (SqlConnection conn = new SqlConnection(connMSSQL))
                 {
@@ -90,16 +93,15 @@ public class RoyalCargoFileSenderBackgroundService : BackgroundService
                         }
                     }
                 }
+                await Task.Delay(TimeSpan.FromMinutes(2), stoppingToken); // Várakozás 2 percig a következő iteráció előtt
             }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "An error occurred during the background process.");
-                await Task.Delay(TimeSpan.FromMinutes(1), stoppingToken); // Wait on error
-            }
-            await Task.Delay(TimeSpan.FromMinutes(2), stoppingToken); // Wait 10 minutes before the next iteration
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "An error occurred during the background process.");
         }
 
-        _logger.LogInformation("File sender background process has stopped.");
+        _logger.LogInformation("File sender background process has stopped."); // Ez a sor soha nem fut le
     }
 
     private async Task<string> GetTokenAsync(CancellationToken stoppingToken)
@@ -178,8 +180,11 @@ public class RoyalCargoFileSenderBackgroundService : BackgroundService
         {
             _logger.LogError(ex, $"Hiba történt az ID {mediaId} rekord frissítése során.");
         }
+
+
     }
-    class TokenResponse
+
+    private class TokenResponse
     {
         public string Token { get; set; }
     }

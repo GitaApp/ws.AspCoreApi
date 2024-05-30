@@ -18,6 +18,12 @@ var builder = WebApplication.CreateBuilder(args);
 
 var configuration = builder.Configuration;
 
+Host.CreateDefaultBuilder(args)
+.ConfigureServices(services =>
+ {
+     services.AddHostedService<Pinger>();
+ });
+
 // For Entity Framework
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(configuration.GetConnectionString("connMSSQL")));
 builder.Services.AddDbContext<DbContextClass>();
@@ -56,7 +62,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(option =>
 {
-    option.SwaggerDoc("v1", new OpenApiInfo { Title = "GITA API test", Version = "v1" });
+    option.SwaggerDoc("v1", new OpenApiInfo { Title = "GITA API production", Version = "v1" });
     option.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         In = ParameterLocation.Header,
@@ -86,6 +92,7 @@ builder.Services.AddSwaggerGen(option =>
 builder.Services.Configure<IISServerOptions>(options =>
 {
     options.MaxRequestBodySize = int.MaxValue;
+    
 });
 
 builder.Services.Configure<KestrelServerOptions>(options =>
@@ -119,9 +126,14 @@ builder.Services.AddControllers(options =>
 
 builder.Services.AddHttpClient();
 
+
+
 //////call services
 builder.Services.AddHostedService<RoyalCargoFileSenderBackgroundService> ();
 builder.Services.AddHostedService<RoyalCargoPointDataSyncService>();
+//builder.Services.AddHostedService<Pinger>(); // Pinger hozzáadása
+
+
 
 var app = builder.Build();
 

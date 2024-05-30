@@ -59,14 +59,18 @@ namespace gitaAPI.Entities
         public string startTime { get; set; }
         public bool billable { get; set; }
         public string currency { get; set; }
+       
         public List<Point> points { get; set; }
     }
 
     public class Point
     {
         public int id { get; set; }
+        [Required(ErrorMessage = "extLineId is required")]
+        public int extLineId { get; set; }
         [Required(ErrorMessage = "extPointId is required")]
         public int extPointId { get; set; }
+        
         public int order { get; set; }
         public int type { get; set; }
         public string name { get; set; }
@@ -81,6 +85,8 @@ namespace gitaAPI.Entities
         public bool tracking { get; set; }
         public bool mustDocs { get; set; }
         public bool statusCheck { get; set; }
+        public string reference { get; set; }
+        
         public bool delete { get; set; }
     }
 

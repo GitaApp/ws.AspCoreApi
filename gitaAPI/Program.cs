@@ -62,7 +62,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(option =>
 {
-    option.SwaggerDoc("v1", new OpenApiInfo { Title = "GITA API production", Version = "v1" });
+    option.SwaggerDoc("v1", new OpenApiInfo { Title = "GITA API Test", Version = "v1" });
     option.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         In = ParameterLocation.Header,
@@ -131,6 +131,7 @@ builder.Services.AddHttpClient();
 //////call services
 builder.Services.AddHostedService<RoyalCargoFileSenderBackgroundService> ();
 builder.Services.AddHostedService<RoyalCargoPointDataSyncService>();
+builder.Services.AddHostedService<DukaYardCarrierWorkdateBackground>();
 //builder.Services.AddHostedService<Pinger>(); // Pinger hozzáadása
 
 

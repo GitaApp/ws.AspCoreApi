@@ -3900,19 +3900,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/oberhauserjanos/.nuget/packages/": {}
+    "/Users/mag/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/oberhauserjanos/Projects/gitaAPI/gitaAPI/gitaAPI.csproj",
+      "projectUniqueName": "/Users/mag/Documents/Gita/GIT/ws.AspCoreApi/gitaAPI/gitaAPI.csproj",
       "projectName": "gitaAPI",
-      "projectPath": "/Users/oberhauserjanos/Projects/gitaAPI/gitaAPI/gitaAPI.csproj",
-      "packagesPath": "/Users/oberhauserjanos/.nuget/packages/",
-      "outputPath": "/Users/oberhauserjanos/Projects/gitaAPI/gitaAPI/obj/",
+      "projectPath": "/Users/mag/Documents/Gita/GIT/ws.AspCoreApi/gitaAPI/gitaAPI.csproj",
+      "packagesPath": "/Users/mag/.nuget/packages/",
+      "outputPath": "/Users/mag/Documents/Gita/GIT/ws.AspCoreApi/gitaAPI/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/oberhauserjanos/.nuget/NuGet/NuGet.Config"
+        "/Users/mag/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"

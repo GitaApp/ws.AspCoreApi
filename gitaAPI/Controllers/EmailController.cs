@@ -107,8 +107,8 @@ namespace upformapi.Controllers
                     var mailMessage = new MailMessage
                     {
                         From = new MailAddress(_configuration["Smtp:From"]),
-                        Subject = "File Attachment",
-                        Body = "Please find the attached file.",
+                        Subject = file.FileName,
+                        Body = "Tisztelt Partnerünk!<br><br>Mellékletben küldjük a jármű listát.<br><br>A számlában kérjük feltüntetni a fuvart be azonosító sorszámot, és a számlázási időszakot.<br><br>Duka Yard Kft.<br>1186 Budapest, Besence utca 3.",
                         IsBodyHtml = true,
                     };
                     mailMessage.To.Add(email);

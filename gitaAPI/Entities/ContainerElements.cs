@@ -61,6 +61,7 @@ namespace gitaAPI.Entities
         public string currency { get; set; }
        
         public List<Point> points { get; set; }
+        public List<Good> goods { get; set; }
     }
 
     public class Point

@@ -122,6 +122,10 @@ namespace gitaAPI.Entities
 
         [Required(ErrorMessage = "unLoadingTracking is required")]
         public bool unLoadingTracking { get; set; }
+
+        public bool delete { get; set; }
+
+        public List<Good> goods { get; set; }
     }
 
 

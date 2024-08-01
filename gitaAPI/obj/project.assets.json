@@ -3900,26 +3900,25 @@
     ]
   },
   "packageFolders": {
-    "/Users/mag/.nuget/packages/": {}
+    "/Users/oberhauserjanos/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/mag/Documents/Gita/GIT/ws.AspCoreApi/gitaAPI/gitaAPI.csproj",
+      "projectUniqueName": "/Users/oberhauserjanos/Projects/ws.AspCoreApi/gitaAPI/gitaAPI.csproj",
       "projectName": "gitaAPI",
-      "projectPath": "/Users/mag/Documents/Gita/GIT/ws.AspCoreApi/gitaAPI/gitaAPI.csproj",
-      "packagesPath": "/Users/mag/.nuget/packages/",
-      "outputPath": "/Users/mag/Documents/Gita/GIT/ws.AspCoreApi/gitaAPI/obj/",
+      "projectPath": "/Users/oberhauserjanos/Projects/ws.AspCoreApi/gitaAPI/gitaAPI.csproj",
+      "packagesPath": "/Users/oberhauserjanos/.nuget/packages/",
+      "outputPath": "/Users/oberhauserjanos/Projects/ws.AspCoreApi/gitaAPI/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/mag/.nuget/NuGet/NuGet.Config"
+        "/Users/oberhauserjanos/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
         "/usr/local/share/dotnet/library-packs": {},
-        "/usr/local/share/dotnet/sdk/7.0.316/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -3932,6 +3931,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -3998,6 +4002,20 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[7.0.20, 7.0.20]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.osx-arm64",
+            "version": "[7.0.20, 7.0.20]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[7.0.20, 7.0.20]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -4006,8 +4024,30 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.316/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.302/RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.Data.SqlClient' 5.1.2 has a known high severity vulnerability, https://github.com/advisories/GHSA-98g6-xh36-x2p7",
+      "libraryId": "Microsoft.Data.SqlClient",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    },
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'System.Data.SqlClient' 4.8.5 has a known high severity vulnerability, https://github.com/advisories/GHSA-98g6-xh36-x2p7",
+      "libraryId": "System.Data.SqlClient",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    }
+  ]
 }

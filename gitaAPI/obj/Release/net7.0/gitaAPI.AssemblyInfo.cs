@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("gitaAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6839ec0788e1b16f6beedac2b35bd81e317d663e")]
 [assembly: System.Reflection.AssemblyProductAttribute("gitaAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("gitaAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

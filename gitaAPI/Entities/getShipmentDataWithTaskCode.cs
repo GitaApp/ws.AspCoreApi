@@ -29,7 +29,7 @@ namespace gitaAPI.Entities
         [StringLength(255, ErrorMessage = "note must be at most 255 characters")]
         public string note { get; set; }
 
-
+        public bool delete { get; set; }
         public List<lineData> lineData { get; set; }
     }
 
@@ -123,7 +123,7 @@ namespace gitaAPI.Entities
         [Required(ErrorMessage = "unLoadingTracking is required")]
         public bool unLoadingTracking { get; set; }
 
-        public bool delete { get; set; }
+        
 
         public List<Good> goods { get; set; }
     }
